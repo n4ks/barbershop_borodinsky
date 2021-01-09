@@ -11,6 +11,10 @@ import htmlmin from 'gulp-htmlmin';
 import csso from 'postcss-csso';
 import browsersync from 'browser-sync';
 import rename from 'gulp-rename';
+import imagemin from 'gulp-imagemin';
+import imageminwebp from 'gulp-webp';
+// * 10.01.21 функция mozjpeg объявлена в d.ts imagemin, но не поставляется вместе с ней, ставим отдельно
+import imageminmozjpeg from 'imagemin-mozjpeg';
 
 // HTML
 const html = () => {
@@ -55,7 +59,30 @@ const scripts = () => {
 };
 
 // Images
-// TODO: реализовать
+export const images = () => {
+  return gulp
+    .src('src/images/**/*.{png,jpg,svg}')
+    .pipe(
+      imagemin([
+        imagemin.optipng({
+          optimizationLevel: 3,
+        }),
+        imageminmozjpeg({
+          quality: 75,
+          progressive: true,
+        }),
+        imagemin.svgo(),
+      ])
+    )
+    .pipe(gulp.dest('dist/images'));
+};
+
+export const webp = () => {
+  return gulp
+    .src('src/images/**/*.{png,jpg}')
+    .pipe(imageminwebp({ quality: 90 }))
+    .pipe(gulp.dest('dist/images'));
+};
 
 // SVG
 // TODO: реализовать
@@ -64,7 +91,7 @@ const scripts = () => {
 const copy = () => {
   return gulp
     .src(['src/fonts/**/*', 'src/images/**/*'], { base: 'src' })
-    .pipe(gulp.dest('dist/images'))
+    .pipe(gulp.dest('dist'))
     .pipe(
       browsersync.stream({
         once: true,
@@ -100,12 +127,12 @@ const watch = () => {
   gulp.watch('src/*.html', gulp.series(html, paths));
   gulp.watch('src/sass/**/*.scss', gulp.series(styles));
   gulp.watch('src/scripts/**/*.js', gulp.series(scripts));
+  // TODO: скорее всего будет пережимать при каждом сохранении, проверить
   gulp.watch(['src/fonts/**/*', 'src/images/**/*'], gulp.series(copy));
 };
-
 // Default
 export default gulp.series(
-  gulp.parallel(html, styles, scripts, copy),
+  gulp.parallel(html, styles, scripts, webp, images, copy),
   paths,
   gulp.parallel(watch, server)
 );
