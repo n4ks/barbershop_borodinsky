@@ -77,6 +77,8 @@ export const images = () => {
     .pipe(gulp.dest('dist/images'));
 };
 
+// ? в общем потоке images отрабатывает странно, похоже блокирует сжатие jpeg
+// ? если вызывать до сжатия
 export const webp = () => {
   return gulp
     .src('src/images/**/*.{png,jpg}')
@@ -90,7 +92,7 @@ export const webp = () => {
 // Copy
 const copy = () => {
   return gulp
-    .src(['src/fonts/**/*', 'src/images/**/*'], { base: 'src' })
+    .src('src/fonts/**/*', { base: 'src' })
     .pipe(gulp.dest('dist'))
     .pipe(
       browsersync.stream({
@@ -122,17 +124,18 @@ const server = () => {
   });
 };
 
+// TODO: Реализовать clear dist
+
 // Watch
 const watch = () => {
-  gulp.watch('src/*.html', gulp.series(html, paths));
+  gulp.watch('src/*.html', gulp.series(html));
   gulp.watch('src/sass/**/*.scss', gulp.series(styles));
   gulp.watch('src/scripts/**/*.js', gulp.series(scripts));
-  // TODO: скорее всего будет пережимать при каждом сохранении, проверить
-  gulp.watch(['src/fonts/**/*', 'src/images/**/*'], gulp.series(copy));
+  gulp.watch('src/fonts/**/*', gulp.series(copy));
+  gulp.watch('src/images/**/*', gulp.series(webp, images))
 };
 // Default
 export default gulp.series(
   gulp.parallel(html, styles, scripts, webp, images, copy),
-  paths,
   gulp.parallel(watch, server)
 );
