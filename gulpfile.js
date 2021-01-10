@@ -13,6 +13,7 @@ import browsersync from 'browser-sync';
 import rename from 'gulp-rename';
 import imagemin from 'gulp-imagemin';
 import imageminwebp from 'gulp-webp';
+import del from 'del';
 // * 10.01.21 функция mozjpeg объявлена в d.ts imagemin, но не поставляется вместе с ней, ставим отдельно
 import imageminmozjpeg from 'imagemin-mozjpeg';
 
@@ -77,8 +78,6 @@ export const images = () => {
     .pipe(gulp.dest('dist/images'));
 };
 
-// ? в общем потоке images отрабатывает странно, похоже блокирует сжатие jpeg
-// ? если вызывать до сжатия
 export const webp = () => {
   return gulp
     .src('src/images/**/*.{png,jpg}')
@@ -124,7 +123,8 @@ const server = () => {
   });
 };
 
-// TODO: Реализовать clear dist
+// Utility
+const clean = () => del('dist');
 
 // Watch
 const watch = () => {
@@ -132,10 +132,12 @@ const watch = () => {
   gulp.watch('src/sass/**/*.scss', gulp.series(styles));
   gulp.watch('src/scripts/**/*.js', gulp.series(scripts));
   gulp.watch('src/fonts/**/*', gulp.series(copy));
-  gulp.watch('src/images/**/*', gulp.series(webp, images))
+  gulp.watch('src/images/**/*', gulp.series(webp, images));
 };
+
 // Default
 export default gulp.series(
+  clean,
   gulp.parallel(html, styles, scripts, webp, images, copy),
   gulp.parallel(watch, server)
 );
