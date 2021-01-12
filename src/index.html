@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/style.min.css" />
     <title>Barbershop Borodinsky</title>
   </head>
+
   <body>
     <header class="page-header">
       <div class="container">
@@ -64,7 +65,7 @@
           </li>
         </ul>
       </section>
-      <div class="columns">
+      <div class="index-columns">
         <section class="news">
           <h2>Новости</h2>
           <ul class="news-list news__news-list">
@@ -77,7 +78,7 @@
               <time class="news-list__time"></time>
             </li>
           </ul>
-          <button class="button news__button" type="button">Все новости</button>
+          <button class="btn news__btn" type="button">Все новости</button>
         </section>
         <section class="gallery">
           <h2 class="gallery__title">Фотогалерея</h2>
@@ -86,26 +87,118 @@
             <img class="slider__item" src="" alt="" />
           </figure>
           <div class="gallery__container">
-            <button
-              class="button gallery__button gallery__button--back"
-              type="button"
-            >
+            <button class="btn gallery__btn gallery__btn--back" type="button">
               Назад
             </button>
-            <button
-              class="button gallery__button gallery__button--next"
-              type="button"
-            >
+            <button class="btn gallery__btn gallery__btn--next" type="button">
               Вперед
             </button>
           </div>
         </section>
       </div>
-      <div class="columns">
-          <section class="contacts"></section>
-          <section class="appointment"></section>
+      <div class="index-columns">
+        <section class="contacts">
+          <h2 class="contacts__title">Контактная информация</h2>
+          <p class="contacts__text">
+            Барбершоп «Бородинский»<br />
+            Адрес: г. Санкт-Петербург, Б. Конюшенная, Д. 19/8<br />
+            Телефон: +7 495 666-02-66
+          </p>
+          <div class="contacts__container">
+            <!-- TODO если переводят на отдельные страницы - ссылки, иначе кнопки, как вообще реализовывают проверку работает ли JS? -->
+            <a href="#" class="btn contacts__btn">Как проехать</a>
+            <a href="#" class="btn contacts__btn">Обратная связь</a>
+          </div>
+        </section>
+        <section class="appointment">
+          <h2 class="appointment__title">Записаться</h2>
+          <p class="appointment__text">
+            Укажите желаемую дату и время и мы свяжемся с вами для подтверждения
+            брони
+          </p>
+          <form action="" class="appointment-form appointment__form">
+            <div class="appointment__container">
+              <label for="" class="appointment-form__label" for="input-date"
+                >Дата</label
+              >
+              <input
+                class="appointment-form__input"
+                id="input-date"
+                type="text"
+                placeholder="08.10.2017"
+              />
+            </div>
+            <div class="appointment__container">
+              <label for="" class="appointment-form__label" for="input-time"
+                >Время</label
+              >
+              <input
+                class="appointment-form__input"
+                id="input-time"
+                type="text"
+                placeholder="10:00"
+              />
+            </div>
+            <div class="appointment__container">
+              <label for="" class="appointment-form__label" for="input-name"
+                >Ваше имя</label
+              >
+              <input
+                class="appointment-form__input"
+                id="input-name"
+                type="text"
+                placeholder="Борода"
+              />
+            </div>
+            <div class="appointment__container">
+              <label for="" class="appointment-form__label" for="input-phone"
+                >Телефон</label
+              >
+              <input
+                class="appointment-form__input"
+                id="input-phone"
+                type="text"
+                placeholder="+7 123 456-78-90"
+              />
+            </div>
+            <button type="submit" class="btn btn--wide appointment-form__btn">
+              Отправить
+            </button>
+          </form>
+        </section>
       </div>
     </main>
-    <footer></footer>
+    <footer class="page-footer">
+      <address class="page-footer__text">
+        Барбершоп «Бородинский»<br />
+        Адрес: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+        <a class="page-footer__link" href="">Как нас найти?</a><br />
+        Телефон:<a href="tel:+74956660266">+7 (495) 666-02-66</a>
+      </address>
+
+      <b class="page-footer__text">Давайте дружить!</b>
+      <ul class="socials-list page-footer__socials-list">
+        <li class="socials-list__item">
+          <a href="" class="btn btn--icon--vk btn--size--s socials-list__link">
+            <span class="visually-hidden">«Бородинский» Вконтакте</span>
+          </a>
+        </li>
+        <li class="socials-list__item">
+          <a href="" class="btn btn--icon--fb btn--size--s socials-list__link">
+            <span class="visually-hidden">«Бородинский» на Фейсбук</span>
+          </a>
+        </li>
+        <li class="socials-list__item">
+          <a href="" class="btn btn--icon--inst btn--size--s socials-list__link"
+            ><span class="visually-hidden">«Бородинский» в Инстаграм</span>
+          </a>
+        </li>
+      </ul>
+
+      <p class="page-footer__text">
+        <b class="page-footer__text"> Разработано:</b
+        ><a href="" class="link page-footer__link">Html Academy</a>
+      </p>
+    </footer>
   </body>
 </html>
