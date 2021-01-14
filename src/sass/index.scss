@@ -1,5 +1,7 @@
 @import 'variables.scss';
 @import 'normalize.css';
+@import 'base.scss';
+@import 'components/page-header.scss';
 
 /*
     TODO: Проверить минификацию css, добавить в сборку плагин для
