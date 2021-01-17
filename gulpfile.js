@@ -32,15 +32,14 @@ const html = () => {
 };
 
 // CSS
-// TODO: проверить сорсмапы
 const styles = () => {
   return gulp
     .src('src/sass/index.scss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
-    .pipe(sourcemaps.write())
     .pipe(postcss([postcssimport, autoprefixer, csso({ comments: false })]))
     .pipe(rename('style.min.css'))
+    .pipe(sourcemaps.write('sourcemaps'))
     .pipe(gulp.dest('dist/css'))
     .pipe(browsersync.stream());
 };

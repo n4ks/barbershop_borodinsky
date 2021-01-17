@@ -41,7 +41,7 @@ input[type='radio'].visually-hidden {
 }
 
 body {
-  margin: 0 auto;
+  margin: 0;
 
   text-transform: uppercase;
 
@@ -65,11 +65,4 @@ a {
 img {
   max-width: 100%;
   height: auto;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
 }

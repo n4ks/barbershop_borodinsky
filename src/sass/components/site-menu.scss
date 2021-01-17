@@ -1,0 +1,9 @@
+.site-menu {
+  @include menu;
+  @include reset-list;
+}
+
+.site-menu__link {
+  @include menu-link;
+}
+

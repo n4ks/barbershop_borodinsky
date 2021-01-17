@@ -1,7 +1,16 @@
 @import 'variables.scss';
+@import 'mixins.scss';
 @import 'normalize.css';
 @import 'base.scss';
-@import 'components/page-header.scss';
+@import 'components/site-header.scss';
+@import 'components/main-nav.scss';
+@import 'components/site-menu.scss';
+@import 'components/user-menu.scss';
+@import 'components/features.scss';
+@import 'components/features-list.scss';
+@import 'components/container.scss';
+@import 'components/news.scss';
+@import 'components/gallery.scss';
 
 /*
     TODO: Проверить минификацию css, добавить в сборку плагин для

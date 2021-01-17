@@ -1,0 +1,8 @@
+.container {
+    &--bg--light {
+        background-color: $bg--light;
+        background-image: url('../../images/bg-light.jpg');
+        background-repeat: repeat;
+        background-position: 0 0;
+    }
+}

@@ -1,0 +1,29 @@
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin menu {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin menu-link {
+  color: $white;
+
+  &:hover,
+  &:focus {
+    background-color: $medium-gray;
+  }
+
+  &:active {
+    background-color: $dark-gray;
+  }
+}
+
+@mixin title {
+  font-size: 30px;
+  line-height: 42px;
+}

@@ -1,0 +1,8 @@
+.user-menu {
+  @include menu;
+  @include reset-list;
+}
+
+.user-menu__link {
+  @include menu-link;
+}
