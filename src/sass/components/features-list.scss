@@ -1,11 +1,14 @@
 .features-list {
-    @include reset-list;
+  color: $white;
+
+  @include reset-list;
 }
 
 .features-list__title {
-    @include title;
+  @include title;
 }
 
 .features-list__item {
-    text-align: center;
+  text-align: center;
 }
+
