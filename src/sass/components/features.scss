@@ -1,0 +1,13 @@
+.features__list {
+    color: $white;
+  
+    @include reset-list;
+  }
+  
+  .features__title {
+    @include title;
+  }
+  
+  .features__item {
+    text-align: center;
+  }
