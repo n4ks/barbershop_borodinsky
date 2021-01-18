@@ -1,8 +1,19 @@
 .container {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.container {
     &--bg--light {
         background-color: $bg--light;
         background-image: url('../../images/bg-light.jpg');
         background-repeat: repeat;
         background-position: 0 0;
+    }
+
+    &--columns--2 {
+        display: flex;
+        justify-content: space-between;
     }
 }
