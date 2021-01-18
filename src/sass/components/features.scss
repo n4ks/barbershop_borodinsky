@@ -1,13 +1,41 @@
 .features__list {
-    color: $white;
+  display: flex;
+  justify-content: space-between;
+
+  @include reset-list;
+}
+
+.features__title {
+  position: relative;
+
+  margin: 0;
+  margin-bottom: 60px;
+
+  &::after {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
   
-    @include reset-list;
+    content: '';
+
+    transform: rotate(45deg);
+
+    background-color: $white;
   }
-  
-  .features__title {
-    @include title;
-  }
-  
-  .features__item {
-    text-align: center;
-  }
+
+  @include title;
+}
+
+.features__item {
+  width: 300px;
+
+  text-align: center;
+}
+
+.features__text {
+  margin: 0 10px;
+}

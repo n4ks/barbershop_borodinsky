@@ -23,8 +23,6 @@
 
   color: $white;
 
-  font-weight: 700;
-
   &:hover,
   &:focus {
     background-color: $medium-gray;
@@ -42,5 +40,5 @@
 
 @mixin section {
   box-sizing: border-box;
-  width: 460px;
+  width: 380px;
 }
