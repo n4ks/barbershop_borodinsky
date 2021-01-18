@@ -1,3 +1,21 @@
-.site-header {
-    background-color: $black;
+.site-header__nav {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.site-header__logo {
+    order: 2;
+}
+
+.site-header__wrapper {
+  width: 100%;
+  margin-bottom: 60px;
+
+  background-color: $black;
+}
+
+.site-header__container {
+  display: flex;
+  justify-content: space-between;
 }

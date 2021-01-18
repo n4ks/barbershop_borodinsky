@@ -39,3 +39,8 @@
   font-size: 30px;
   line-height: 42px;
 }
+
+@mixin section {
+  box-sizing: border-box;
+  width: 460px;
+}

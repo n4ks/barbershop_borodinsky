@@ -1,11 +1,32 @@
 .user-menu {
+  max-width: 140px;
+
   @include menu;
   @include reset-list;
 }
 
 .user-menu__link {
+  // TODO Можно подумать как вынести это в общий класс типа menu-link или что то подобное
   &--icon {
+    position: relative;
+    
     padding-left: 50px;
+  }
+
+  &--icon--login::before {
+    position: absolute;
+    
+    top: 30px;
+    left: 17px;
+
+    width: 16px;
+    height: 18px;
+
+    content: '';
+
+    background-image: url('../images/login-icon.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
   }
 
   @include menu-link;

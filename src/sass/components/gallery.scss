@@ -1,3 +1,5 @@
 .gallery {
     color: $black;
+
+    @include section;
 }
