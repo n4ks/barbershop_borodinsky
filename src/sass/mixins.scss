@@ -7,12 +7,23 @@
 
 // Общие стили для списков меню
 @mixin menu {
+  display: flex;
+  flex-wrap: wrap;
+
   font-size: 16px;
   line-height: 24px;
 }
 
 @mixin menu-link {
+  display: block;
+
+  padding: 25px 20px;
+
+  vertical-align: middle;
+
   color: $white;
+
+  font-weight: 700;
 
   &:hover,
   &:focus {

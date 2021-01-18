@@ -6,18 +6,20 @@
     <link rel="stylesheet" href="css/style.min.css" />
     <title>Barbershop Borodinsky</title>
   </head>
-<!-- ! задать классы для заголовков с модификаторами (sm-md-lg etc.) -->
+  <!-- ! задать классы для заголовков с модификаторами (sm-md-lg etc.) -->
   <body>
     <header class="site-header">
-      <div class="container">
-        <nav class="main-nav">
+      <nav class="site-header__nav">
+        <!-- <a href class="site-header__link">
           <img
-            class="logo main__logo"
+            class="logo site-header__logo"
             src="images/index-logo.svg"
             alt="Логотип барбешопа «Бородинский»"
             width="371"
             height="155"
           />
+        </a> -->
+        <div class="container container--columns--2">
           <ul class="site-menu main-nav__site-menu">
             <li class="site-menu__item">
               <a class="site-menu__link" href="info.html">Информация</a>
@@ -37,11 +39,15 @@
           </ul>
           <ul class="user-menu main-nav__user-menu">
             <li class="user-menu__item">
-              <a class="user-menu__link" href="#">Вход</a>
+              <a
+                class="user-menu__link user-menu__link--icon user-menu__link--icon--login"
+                href="#"
+                >Вход</a
+              >
             </li>
           </ul>
-        </nav>
-      </div>
+        </div>
+      </nav>
     </header>
     <main class="container">
       <h1 class="visually-hidden">Барбершоп «Бородинский»</h1>
@@ -174,7 +180,7 @@
         </section>
       </div>
     </main>
-    <footer class="site-footer">
+    <footer class="container site-footer">
       <address class="site-footer__text">
         Барбершоп «Бородинский»<br />
         Адрес: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8

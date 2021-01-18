@@ -1,4 +1,6 @@
 .site-menu {
+  width: 580px;
+
   @include menu;
   @include reset-list;
 }

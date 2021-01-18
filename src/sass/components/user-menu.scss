@@ -4,5 +4,9 @@
 }
 
 .user-menu__link {
+  &--icon {
+    padding-left: 50px;
+  }
+
   @include menu-link;
 }
