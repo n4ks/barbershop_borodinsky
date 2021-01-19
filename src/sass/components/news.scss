@@ -1,8 +1,15 @@
 .news {
-  @include section;
+  width: 380px;
+
   color: $black;
 }
 
 .news__title {
   @include title;
+
+  margin-bottom: 20px;
+}
+
+.news__news-list {
+  margin-bottom: 30px;
 }

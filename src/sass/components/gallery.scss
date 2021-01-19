@@ -1,9 +1,11 @@
 .gallery {
-    color: $black;
+  width: 300px;
 
-    @include section;
+  color: $black;
 }
 
 .gallery__title {
-    @include title;
+  @include title;
+
+  letter-spacing: 0.6px;
 }

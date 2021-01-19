@@ -1,5 +1,21 @@
 // В отличие от features-list имеет смысл вынести news-list в отдельный компонент т.к. на главной есть кнопка
 // ведущая на страницу с новостями, т.е. компонент будет переиспользываться. :)
 .news-list {
-  color: $black;
+  @include reset-list;
+}
+
+.news-list__item {
+  margin-bottom: 21px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.news-list__text {
+  letter-spacing: 0.1px;
+}
+
+.news-list__date {
+  text-transform: lowercase;
 }
