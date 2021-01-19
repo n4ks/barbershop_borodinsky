@@ -3,3 +3,7 @@
 
     @include section;
 }
+
+.gallery__title {
+    @include title;
+}

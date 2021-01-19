@@ -1,14 +1,25 @@
+.features {
+  margin-bottom: 77px;
+}
+
 .features__list {
+  @include reset-list;
+
   display: flex;
   justify-content: space-between;
 
-  @include reset-list;
+}
+
+.features__item {
+  box-sizing: border-box;
+  padding: 0 10px;
 }
 
 .features__title {
+  @include title;
+
   position: relative;
 
-  margin: 0;
   margin-bottom: 60px;
 
   &::after {
@@ -27,7 +38,6 @@
     background-color: $white;
   }
 
-  @include title;
 }
 
 .features__item {
@@ -36,6 +46,3 @@
   text-align: center;
 }
 
-.features__text {
-  margin: 0 10px;
-}

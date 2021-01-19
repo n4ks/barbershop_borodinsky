@@ -1,4 +1,8 @@
 .news {
-    color: $black;
-    @include section;
+  @include section;
+  color: $black;
+}
+
+.news__title {
+  @include title;
 }
