@@ -1,0 +1,9 @@
+.appointment {
+    width: 300px;
+
+    color: $black;
+}
+
+.appointment__title {
+    @include title;
+}

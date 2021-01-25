@@ -6,6 +6,20 @@
 
 .gallery__title {
   @include title;
+  margin-bottom: 21px;
 
-  letter-spacing: 0.6px;
+  letter-spacing: 0.7px;
+}
+
+.gallery__slider {
+  margin-bottom: 39px;
+}
+
+.gallery__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gallery__btn {
+  width: 140px;
 }

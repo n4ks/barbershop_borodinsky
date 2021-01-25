@@ -2,8 +2,11 @@
   display: flex;
   justify-content: space-between;
 
-  padding-top: 45px;
+  margin-bottom: 36px;
 
-  padding-right: 78px;
-  padding-left: 81px;
+  padding: 45px 80px 49px 81px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }

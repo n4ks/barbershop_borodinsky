@@ -12,10 +12,8 @@
 @import 'components/index-columns.scss';
 @import 'components/news-list.scss';
 @import 'components/news.scss';
+@import 'components/slider.scss';
 @import 'components/gallery.scss';
+@import 'components/contacts.scss';
+@import 'components/appointment.scss';
 
-/*
-    TODO: Проверить минификацию css, добавить в сборку плагин для
-    перестановки CSS правил в определенном порядке (прим. по яндексу)
-    см. в мишке, stylelint?
-*/

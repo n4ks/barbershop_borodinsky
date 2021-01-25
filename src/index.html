@@ -86,15 +86,21 @@
           <ul class="news-list news__news-list">
             <li class="news-list__item">
               <p class="news-list__text">
-                Нам наконец завезли ягермайстер! Теперь вы можете пропустить стаканчик во время стрижки
+                Нам наконец завезли ягермайстер! Теперь вы можете пропустить
+                стаканчик во время стрижки
               </p>
-              <time class="news-list__date" datetime="2016-01-11">11 января</time>
+              <time class="news-list__date" datetime="2016-01-11"
+                >11 января</time
+              >
             </li>
             <li class="news-list__item">
               <p class="news-list__text">
-                В нашей команде пополнение, Борис «Бритва» Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды
+                В нашей команде пополнение, Борис «Бритва» Стригунец, обладатель
+                множества титулов и наград пополнил наши стройные ряды
               </p>
-              <time class="news-list__date" datetime="2016-01-18">18 января</time>
+              <time class="news-list__date" datetime="2016-01-18"
+                >18 января</time
+              >
             </li>
           </ul>
           <a class="btn news__btn" href="#">Все новости</a>
@@ -103,13 +109,22 @@
           <h2 class="gallery__title">Фотогалерея</h2>
           <figure class="slider gallery__slider">
             <!-- TODO Реализовать слайдер -->
-            <img class="slider__item" src="" alt="" />
+            <!-- ! в фигме картинка выгружается криво (291px с белым бортом справа), экспортировать из фотошопа и заменить -->
+            <a class="slider__link" href="#">
+              <img
+                class="slider__image"
+                src="images/room.jpg"
+                alt="Интерьер барбершопа Бородинский"
+                width="286"
+                height="164"
+              />
+            </a>
           </figure>
           <div class="gallery__container">
-            <button class="btn gallery__btn gallery__btn--back" type="button">
+            <button class="btn gallery__btn" type="button">
               Назад
             </button>
-            <button class="btn gallery__btn gallery__btn--next" type="button">
+            <button class="btn gallery__btn" type="button">
               Вперед
             </button>
           </div>
@@ -135,7 +150,7 @@
             Укажите желаемую дату и время и мы свяжемся с вами для подтверждения
             брони
           </p>
-          <form action="" class="appointment-form appointment__form">
+          <form action="post" class="appointment-form appointment__form">
             <div class="appointment__container">
               <label for="" class="appointment-form__label" for="input-date"
                 >Дата</label

@@ -1,0 +1,9 @@
+.contacts {
+    width: 325px;
+
+    color: $black;
+}
+
+.contacts__title {
+    @include title;
+}
