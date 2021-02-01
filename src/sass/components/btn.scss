@@ -1,8 +1,12 @@
 .btn {
   display: inline-block;
 
+  box-sizing: border-box;
+
+  width: 140px;
+
   padding: 0;
-  padding: 10px 33px;
+  padding: 10px 20px;
 
   text-align: center;
 
@@ -25,3 +29,6 @@
       background-color: $brown;
   }
 }
+
+
+// TODO: реализовать стили для disabled

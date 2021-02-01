@@ -15,11 +15,6 @@
   margin-bottom: 39px;
 }
 
-.gallery__container {
-  display: flex;
-  justify-content: space-between;
-}
-
 .gallery__btn {
-  width: 140px;
+  @include btn-mr;
 }

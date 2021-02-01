@@ -109,25 +109,22 @@
           <h2 class="gallery__title">Фотогалерея</h2>
           <figure class="slider gallery__slider">
             <!-- TODO Реализовать слайдер -->
-            <!-- ! в фигме картинка выгружается криво (291px с белым бортом справа), экспортировать из фотошопа и заменить -->
             <a class="slider__link" href="#">
               <img
                 class="slider__image"
-                src="images/room.jpg"
+                src="images/slider-photo-1.jpg"
                 alt="Интерьер барбершопа Бородинский"
                 width="286"
                 height="164"
               />
             </a>
           </figure>
-          <div class="gallery__container">
-            <button class="btn gallery__btn" type="button">
-              Назад
-            </button>
-            <button class="btn gallery__btn" type="button">
-              Вперед
-            </button>
-          </div>
+          <button class="btn gallery__btn gallery__btn--prev" type="button">
+            Назад
+          </button>
+          <button class="btn gallery__btn gallery__btn--next" type="button">
+            Вперед
+          </button>
         </section>
       </div>
       <div class="index-columns">
@@ -136,13 +133,15 @@
           <p class="contacts__text">
             Барбершоп «Бородинский»<br />
             Адрес: г. Санкт-Петербург, Б. Конюшенная, Д. 19/8<br />
-            Телефон: +7 495 666-02-66
+            Телефон: +7 (495) 666-02-66
           </p>
-          <div class="contacts__container">
-            <!-- TODO если переводят на отдельные страницы - ссылки, иначе кнопки, как вообще реализовывают проверку работает ли JS? -->
-            <a href="#" class="btn contacts__btn">Как проехать</a>
-            <a href="#" class="btn contacts__btn">Обратная связь</a>
-          </div>
+          <p class="contacts__text contacts__text--mr--250">
+            Время работы:<br />
+            Пн-пт: с 10:00 до 22:00 Сб-вс: с 10:00 до 19:00
+          </p>
+          <!-- TODO если переводят на отдельные страницы - ссылки, иначе кнопки, как вообще реализовывают проверку работает ли JS? -->
+          <a href="#" class="btn contacts__btn">Как проехать</a>
+          <a href="#" class="btn contacts__btn">Обратная связь</a>
         </section>
         <section class="appointment">
           <h2 class="appointment__title">Записаться</h2>

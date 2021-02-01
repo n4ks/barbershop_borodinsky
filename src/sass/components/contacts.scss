@@ -1,9 +1,29 @@
 .contacts {
-    width: 325px;
+  width: 380px;
 
-    color: $black;
+  color: $black;
 }
 
 .contacts__title {
-    @include title;
+  @include title;
+
+  margin-bottom: 18px;
+
+  letter-spacing: 0.2px;
+}
+
+.contacts__text {
+  margin-bottom: 21px;
+
+  &--mr--250 {
+    margin-right: 250px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 22px;
+  }
+}
+
+.contacts__btn {
+  @include btn-mr;
 }
