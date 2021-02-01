@@ -1,9 +1,19 @@
 .appointment {
-    width: 300px;
+  width: 300px;
 
-    color: $black;
+  color: $black;
 }
 
 .appointment__title {
-    @include title;
+  @include title;
+
+  margin-bottom: 18px;
+
+  letter-spacing: 0.7px;
+}
+
+.appointment__text {
+  margin-bottom: 12px;
+
+  letter-spacing: 0.1px;
 }

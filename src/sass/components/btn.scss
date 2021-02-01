@@ -8,6 +8,8 @@
   padding: 0;
   padding: 10px 20px;
 
+  cursor: pointer;
+
   text-align: center;
 
   vertical-align: middle;
@@ -22,13 +24,31 @@
 
   &:hover,
   &:focus {
-      background-color: $medium-gray;
+    background-color: $medium-gray;
   }
 
   &:active {
-      background-color: $brown;
+    background-color: $brown;
+  }
+
+  &:disabled,
+  &--disabled {
+    pointer-events: none;
+
+    opacity: 0.5;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $black;
+    }
+  }
+
+  &--wide {
+    display: block;
+
+    width: 100%;
   }
 }
-
 
 // TODO: реализовать стили для disabled
