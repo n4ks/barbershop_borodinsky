@@ -61,39 +61,51 @@
 
     padding: 0;
   }
+}
 
-  &--type--icon-dark {
-    background-color: $black;
+.btn--theme-dark {
+  background-color: $black;
 
-    svg path {
-      fill: $white;
-    }
+  &:hover,
+  &:focus {
+    background-color: $white;
+  }
+}
 
-    &:hover,
-    &:focus {
-      background-color: $white;
-
-      svg path {
-        fill: $black;
-      }
-    }
+.btn--type--icon.btn--theme-dark {
+  svg path {
+    fill: $white;
   }
 
-  // Сделано для тестирования переключения тем у компонентов
-  // &--type--icon-light {
-  //   background-color: #f8f5f2;
-
-  //   svg path {
-  //     fill: $black;
-  //   }
-
-  //   &:hover,
-  //   &:focus {
-  //     background-color: $black;
-
-  //     svg path {
-  //       fill: $white;
-  //     }
-  //   }
-  // }
+  &:hover,
+  &:focus {
+    svg path {
+      fill: $black;
+    }
+  }
 }
+
+// .btn--theme-light {
+//   background-color: #f8f5f2;
+
+//   &:hover,
+//   &:focus {
+//     background-color: $black;
+// }
+
+// Сделано для тестирования переключения тем у компонентов
+// .btn--type--icon.btn--theme-light {
+
+//   svg path {
+//     fill: $black;
+//   }
+
+//   &:hover,
+//   &:focus {
+//     background-color: $black;
+
+//     svg path {
+//       fill: $white;
+//     }
+//   }
+// }
