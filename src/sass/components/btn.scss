@@ -44,11 +44,56 @@
     }
   }
 
-  &--wide {
+  &--type--wide {
     display: block;
 
     width: 100%;
   }
-}
 
-// TODO: реализовать стили для disabled
+  &--type--icon {
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+
+    width: 43px;
+    height: 43px;
+
+    padding: 0;
+  }
+
+  &--type--icon-dark {
+    background-color: $black;
+
+    svg path {
+      fill: $white;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $white;
+
+      svg path {
+        fill: $black;
+      }
+    }
+  }
+
+  // Сделано для тестирования переключения тем у компонентов
+  // &--type--icon-light {
+  //   background-color: #f8f5f2;
+
+  //   svg path {
+  //     fill: $black;
+  //   }
+
+  //   &:hover,
+  //   &:focus {
+  //     background-color: $black;
+
+  //     svg path {
+  //       fill: $white;
+  //     }
+  //   }
+  // }
+}
