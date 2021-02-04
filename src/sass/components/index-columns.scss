@@ -8,9 +8,10 @@
   padding: 45px 80px 49px 81px;
 
   background-color: $bg--light;
-  background-image: url('../images/bg-light.jpg');
-  background-repeat: repeat;
-  background-position: 0 0;
+  background-image: url('../images/columns-line.png'),
+    url('../images/bg-light.jpg');
+  background-repeat: no-repeat,repeat;
+  background-position: 50%, 0 0;
 
   &:last-of-type {
     margin-bottom: 0;

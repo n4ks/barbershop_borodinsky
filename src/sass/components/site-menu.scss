@@ -1,8 +1,9 @@
 .site-menu {
-  width: 580px;
-
   @include menu;
   @include reset-list;
+  
+  width: 580px;
+
 }
 
 .site-menu__link {

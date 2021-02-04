@@ -89,9 +89,6 @@ export const webp = () => {
     .pipe(gulp.dest("dist/images"));
 };
 
-// SVG
-// TODO: реализовать
-
 // Copy
 const copy = () => {
   return gulp

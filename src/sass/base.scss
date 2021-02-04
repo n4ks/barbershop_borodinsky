@@ -40,23 +40,51 @@ input[type='radio'].visually-hidden {
   clip-path: inset(100%);
 }
 
+// sticky footer
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.site-footer {
+  flex-shrink: 0;
+}
+
+// sticky footer
+
 body {
   min-width: 960px;
   margin: 0;
 
   text-transform: uppercase;
 
-  color: $white;
-
-  background-color: black;
-  background-image: url('../images/bg.jpg');
-  background-repeat: no-repeat;
-  background-position: top center;
+  color: $black;
+  background-color: $bg--light;
+  background-image: url('../images/bg-light.jpg');
+  background-repeat: repeat;
+  background-position: 0 0;
 
   font-family: $site-fonts;
   font-size: 14px;
   font-weight: 700;
   line-height: 24px;
+
+  &.main-page {
+    color: $white;
+    background-color: black;
+    background-image: url('../images/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
 }
 
 a {
