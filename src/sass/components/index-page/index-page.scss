@@ -1,4 +1,4 @@
-.index-columns {
+.index-page__columns {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -10,7 +10,7 @@
   background-color: $bg--light;
   background-image: url('../images/columns-line.png'),
     url('../images/bg-light.jpg');
-  background-repeat: no-repeat,repeat;
+  background-repeat: no-repeat, repeat;
   background-position: 50%, 0 0;
 
   &:last-of-type {

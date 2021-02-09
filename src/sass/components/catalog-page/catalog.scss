@@ -1,0 +1,10 @@
+.catalog {
+  width: 700px;
+}
+
+.catalog__list {
+  @include reset-list;
+
+  display: flex;
+  flex-wrap: wrap;
+}

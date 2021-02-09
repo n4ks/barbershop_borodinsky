@@ -1,0 +1,38 @@
+.filters {
+  width: 180px;
+}
+
+.filters__fieldset {
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 0;
+
+  border: 0;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.filters__title {
+  margin-bottom: 29px;
+}
+
+.filters__list {
+  @include reset-list;
+
+  line-height: 18px;
+}
+
+.filters__item {
+  margin-bottom: 19px;
+  padding-left: 43px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.filters__label {
+  cursor: pointer;
+}

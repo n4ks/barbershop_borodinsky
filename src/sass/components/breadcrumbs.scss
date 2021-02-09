@@ -1,0 +1,48 @@
+.breadcrumbs {
+  @include reset-list;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  font-size: 14px;
+  line-height: 20px;
+}
+// TODO чекнуть стайлгайд
+.breadcrumbs__item {
+  position: relative;
+
+  margin-right: 40px;
+
+  &::after {
+    position: absolute;
+    top: 5px;
+
+    width: 8px;
+    height: 8px;
+    margin-left: 16px;
+
+    content: '';
+    transform: rotate(45deg);
+
+    background-color: $black;
+  }
+
+  &:last-child {
+    margin-right: 0;
+
+    &::after {
+      content: none;
+    }
+  }
+}
+
+.breadcrumbs__link {
+  color: $black;
+
+  &--current,
+  &:not([href]) {
+    pointer-events: none;
+
+    color: $gray;
+  }
+}

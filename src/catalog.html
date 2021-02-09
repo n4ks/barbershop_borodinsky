@@ -45,25 +45,32 @@
         </ul>
       </nav>
     </header>
-    <main class="container">
-      <h1 class="title">Средства для ухода</h1>
-      <ul class="breadcrumbs">
-        <li class="breadcrumbs__item">Главная</li>
-        <li class="breadcrumbs__item">Магазин</li>
+    <main class="container catalog-page">
+      <h1 class="title catalog-page__title">Средства для ухода</h1>
+      <ul class="breadcrumbs catalog-page__breadcrumbs">
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="index.html">Главная</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="catalog.html">Магазин</a>
+        </li>
         <li class="breadcrumbs__item breadcrumbs__item--current">
-          Средства для ухода
+          <a class="breadcrumbs__link">Средства для ухода</a>
         </li>
       </ul>
-      <div class="catalog-columns">
+      <div class="catalog-page__columns">
         <section class="filters">
+          <h2 class="visually-hidden">Фильтр товаров</h2>
           <form class="filters__form" action="" method="get">
             <fieldset class="filters__fieldset">
-              <legend class="title title--md filters__title">Производители:</legend>
+              <legend class="title title--md filters__title">
+                Производители:
+              </legend>
               <ul class="filters__list">
                 <li class="filters__item">
                   <input
                     type="checkbox"
-                    class="filters__checkbox"
+                    class="filters__checkbox visually-hidden"
                     id="input-baxter"
                     name="baxter-of-california"
                   /><label for="input-baxter" class="filters__label"
@@ -73,7 +80,7 @@
                 <li class="filters__item">
                   <input
                     type="checkbox"
-                    class="filters__checkbox"
+                    class="filters__checkbox visually-hidden"
                     id="input-mrnatty"
                     name="mr-natty"
                   /><label for="input-mrnatty" class="filters__label"
@@ -83,7 +90,7 @@
                 <li class="filters__item">
                   <input
                     type="checkbox"
-                    class="filters__checkbox"
+                    class="filters__checkbox visually-hidden"
                     id="input-suavecito"
                     name="suavecito"
                   /><label for="input-suavecito" class="filters__label"
@@ -93,7 +100,7 @@
                 <li class="filters__item">
                   <input
                     type="checkbox"
-                    class="filters__checkbox"
+                    class="filters__checkbox visually-hidden"
                     id="input-malingoetz"
                     name="malin-goetz"
                   /><label for="input-malingoetz" class="filters__label"
@@ -103,7 +110,7 @@
                 <li class="filters__item">
                   <input
                     type="checkbox"
-                    class="filters__checkbox"
+                    class="filters__checkbox visually-hidden"
                     id="input-murrays"
                     name="murrays"
                   /><label for="input-murrays" class="filters__label"
@@ -113,7 +120,7 @@
                 <li class="filters__item">
                   <input
                     type="checkbox"
-                    class="filters__checkbox"
+                    class="filters__checkbox visually-hidden"
                     id="input-americancrew"
                     name="americancrew"
                   /><label for="input-americancrew" class="filters__label"
@@ -123,22 +130,25 @@
               </ul>
             </fieldset>
             <fieldset class="filters__fieldset">
-              <legend class="title title--md filters__title">Группы товаров:</legend>
+              <legend class="title title--md filters__title">
+                Группы товаров:
+              </legend>
               <ul class="filters__list">
                 <li class="filters__item">
                   <input
                     type="radio"
-                    class="filters__radio"
+                    class="filters__radio visually-hidden"
                     id="input-shaving"
                     name="product-group"
                   /><label for="input-shaving" class="filters__label"
-                    >Бритвенные принадлежности</label
+                    >Бритвенные
+                    принадлежности</label
                   >
                 </li>
                 <li class="filters__item">
                   <input
                     type="radio"
-                    class="filters__radio"
+                    class="filters__radio visually-hidden"
                     id="input-care"
                     name="product-group"
                   /><label for="input-care" class="filters__label"
@@ -148,7 +158,7 @@
                 <li class="filters__item">
                   <input
                     type="radio"
-                    class="filters__radio"
+                    class="filters__radio visually-hidden"
                     id="input-accessories"
                     name="product-group"
                   /><label for="input-accessories" class="filters__label"
