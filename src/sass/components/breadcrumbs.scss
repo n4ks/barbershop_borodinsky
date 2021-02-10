@@ -15,11 +15,11 @@
 
   &::after {
     position: absolute;
-    top: 5px;
+    top: 6px;
+    right: -25px;
 
     width: 8px;
     height: 8px;
-    margin-left: 16px;
 
     content: '';
     transform: rotate(45deg);
