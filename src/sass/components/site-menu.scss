@@ -8,4 +8,24 @@
 
 .site-menu__link {
   @include menu-link;
+
+  &--current {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+
+      left: 21px;
+
+      // display: block;
+
+      width: 56px;
+      height: 4px;
+
+      content: '';
+
+      background-color: $white;
+    }
+  }
 }
