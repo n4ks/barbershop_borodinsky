@@ -1,0 +1,41 @@
+.pagination {
+  @include reset-list;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pagination__item {
+  margin-right: 5px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.pagination__btn {
+  display: block;
+
+  padding: 10px 19px;
+
+  color: $white;
+
+  background-color: $black;
+
+  &:hover,
+  &:focus {
+    background-color: $medium-gray;
+  }
+
+  &:active {
+    background-color: $brown;
+  }
+
+  &--current,
+  &:not([href]) {
+    pointer-events: none;
+
+    color: $black;
+    background-color: $white;
+  }
+}
