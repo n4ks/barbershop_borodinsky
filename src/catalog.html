@@ -8,6 +8,7 @@
   </head>
   <body>
     <!-- TODO НЕ ЗАБЫТЬ РЕАЛИЗОВАТЬ <PICTURE> ДЛЯ БРАУЗЕРОВ НЕ ПОДДЕРЖИВАЮЩИХ WEBP -->
+    <!-- TODO можно разбить проект на более мелкие составляющие -->
     <header class="site-header">
       <nav class="container site-header__nav">
         <a class="site-header__logo" href="index.html">
@@ -29,7 +30,11 @@
             <a class="site-menu__link" href="price.html">Прайс-лист</a>
           </li>
           <li class="site-menu__item">
-            <a class="site-menu__link site-menu__link--current" href="catalog.html">Магазин</a>
+            <a
+              class="site-menu__link site-menu__link--current"
+              href="catalog.html"
+              >Магазин</a
+            >
           </li>
           <li class="site-menu__item">
             <a class="site-menu__link" href="contacts.html">Контакты</a>
@@ -177,14 +182,21 @@
         <section class="catalog">
           <ul class="catalog__list">
             <li class="catalog__item">
-              <a href="#" class="catalog__link"
-                ><img
-                  src="./images/traveling-set-baxter.jpg"
-                  alt="Набор для бритья и сумка для хранения"
-                  class="catalog__img"
-                  width="220"
-                  height="165"
-              /></a>
+              <a href="#" class="catalog__link">
+                <picture>
+                  <source
+                    srcset="images/traveling-set-baxter.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./images/traveling-set-baxter.jpg"
+                    alt="Набор для бритья и сумка для хранения"
+                    class="catalog__img"
+                    width="220"
+                    height="165"
+                  />
+                </picture>
+              </a>
               <div class="catalog__wrapper">
                 <h3 class="title title--sm catalog__title">
                   <span class="catalog__category">Набор для путешествий</span>
@@ -199,14 +211,21 @@
               </div>
             </li>
             <li class="catalog__item">
-              <a href="#" class="catalog__link"
-                ><img
-                  src="./images/conditioner-baxter.jpg"
-                  alt="Пузырёк с кнопкой для подачи кондиционера"
-                  class="catalog__img"
-                  width="220"
-                  height="165"
-              /></a>
+              <a href="#" class="catalog__link">
+                <picture>
+                  <source
+                    srcset="images/conditioner-baxter.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./images/conditioner-baxter.jpg"
+                    alt="Пузырёк с кнопкой для подачи кондиционера"
+                    class="catalog__img"
+                    width="220"
+                    height="165"
+                  />
+                </picture>
+              </a>
               <div class="catalog__wrapper">
                 <h3 class="title title--sm catalog__title">
                   <span class="catalog__category">Увлажнающий кондиционер</span>
@@ -221,14 +240,21 @@
               </div>
             </li>
             <li class="catalog__item">
-              <a href="#" class="catalog__link"
-                ><img
-                  src="./images/hair-gel-suavecito.jpg"
-                  alt="Баночка геля с откручивающейся крышкой"
-                  class="catalog__img"
-                  width="220"
-                  height="165"
-              /></a>
+              <a href="#" class="catalog__link">
+                <picture>
+                  <source
+                    srcset="images/hair-gel-suavecito.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./images/hair-gel-suavecito.jpg"
+                    alt="Баночка геля с откручивающейся крышкой"
+                    class="catalog__img"
+                    width="220"
+                    height="165"
+                  />
+                </picture>
+              </a>
               <div class="catalog__wrapper">
                 <h3 class="title title--sm catalog__title">
                   <span class="catalog__category">Гель для волос</span>
@@ -241,14 +267,21 @@
               </div>
             </li>
             <li class="catalog__item">
-              <a href="#" class="catalog__link"
-                ><img
-                  src="./images/hair-clay-americancrew.jpg"
-                  alt="Баночка глины с откручиващейся крышкой"
-                  class="catalog__img"
-                  width="220"
-                  height="165"
-              /></a>
+              <a href="#" class="catalog__link">
+                <picture>
+                  <source
+                    srcset="images/hair-clay-americancrew.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./images/hair-clay-americancrew.jpg"
+                    alt="Баночка глины с откручиващейся крышкой"
+                    class="catalog__img"
+                    width="220"
+                    height="165"
+                  />
+                </picture>
+              </a>
               <div class="catalog__wrapper">
                 <h3 class="title title--sm catalog__title">
                   <span class="catalog__category">Глина для укладки волос</span>
@@ -261,14 +294,21 @@
               </div>
             </li>
             <li class="catalog__item">
-              <a href="#" class="catalog__link"
-                ><img
-                  src="./images/hair-gel-americancrew.jpg"
-                  alt="Тюбик с гелем для волос"
-                  class="catalog__img"
-                  width="220"
-                  height="165"
-              /></a>
+              <a href="#" class="catalog__link">
+                <picture>
+                  <source
+                    srcset="images/hair-gel-americancrew.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./images/hair-gel-americancrew.jpg"
+                    alt="Тюбик с гелем для волос"
+                    class="catalog__img"
+                    width="220"
+                    height="165"
+                  />
+                </picture>
+              </a>
               <div class="catalog__wrapper">
                 <h3 class="title title--sm catalog__title">
                   <span class="catalog__category">Гель для волос</span>
@@ -281,14 +321,21 @@
               </div>
             </li>
             <li class="catalog__item">
-              <a href="#" class="catalog__link"
-                ><img
-                  src="./images/shaving-set-baxter.jpg"
-                  alt="Кисточка для пены, пена и гель для бритья"
-                  class="catalog__img"
-                  width="220"
-                  height="165"
-              /></a>
+              <a href="#" class="catalog__link">
+                <picture>
+                  <source
+                    srcset="images/shaving-set-baxter.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./images/shaving-set-baxter.jpg"
+                    alt="Кисточка для пены, пена и гель для бритья"
+                    class="catalog__img"
+                    width="220"
+                    height="165"
+                  />
+                </picture>
+              </a>
               <div class="catalog__wrapper">
                 <h3 class="title title--sm catalog__title">
                   <span class="catalog__category">Набор для бритья</span>

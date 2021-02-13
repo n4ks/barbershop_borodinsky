@@ -110,13 +110,16 @@
           <figure class="slider gallery__slider">
             <!-- TODO Реализовать слайдер -->
             <a class="slider__link" href="#">
-              <img
-                class="slider__image"
-                src="images/slider-photo-1.jpg"
-                alt="Интерьер барбершопа Бородинский"
-                width="286"
-                height="164"
-              />
+              <picture>
+                <source type="image/webp" srcset="images/slider-photo-1.webp">
+                <img
+                  class="slider__image"
+                  src="images/slider-photo-1.jpg"
+                  alt="Интерьер барбершопа Бородинский"
+                  width="286"
+                  height="164"
+                />
+              </picture>
             </a>
           </figure>
           <button
@@ -130,7 +133,7 @@
           </button>
         </section>
       </div>
-      <div class="index-columns">
+      <div class="index-page__columns">
         <section class="contacts">
           <h2 class="title contacts__title">Контактная информация</h2>
           <p class="contacts__text">
